@@ -14,13 +14,14 @@ Then follow the steps as mentioned below.
 - Regarding installation, I have provided the executable file under test folder.
 -	So, first clone the repo,then open command prompt.
 -	Go to the test folder inside the cloned repository using cd command. For example:
-	- cd C:\Users\Amit Tyagi\Desktop\App\ProductsImporter\test
+	- `cd C:\Users\Amit Tyagi\Desktop\App\ProductsImporter\test`
 - Then run the below commands one by one as mentioned in the requirements 
-  - import.exe capterra feed-products/capterra.yaml
-  - import.exe softwareadvice feed-products/softwareadvice.json
+  - `import.exe capterra feed-products/capterra.yaml`
+  - `import.exe softwareadvice feed-products/softwareadvice.json`
  
 **Input/Output Screenshot:**
 
+![](/images/output.png)
 
 
 # How to run your code / tests
@@ -33,6 +34,8 @@ Below are the steps for the same:
 - This will run all the tests in the project and results will be displayed in the Test Explorer.
 
 **Test Explorer Screenshot:**
+
+![](/images/testResults.png)
 
 # Where to find your code
 After cloning the repository, entire code can be found in the src folder.
