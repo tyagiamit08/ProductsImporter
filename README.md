@@ -12,9 +12,9 @@ This is an application which imports products from different sources and each so
 Go to the [GitHub repo](https://github.com/tyagiamit08/ProductsImporter)
 Then follow the steps as mentioned below.
 - Regarding installation, I have provided the executable file under test folder.
--	So, first clone the repo using `git clone https://github.com/tyagiamit08/ProductsImporter.git`
--       After the cloning is complete, open command prompt.
--	Go to the test folder inside the cloned repository using cd command. For example:
+- So, first clone the repo using `git clone https://github.com/tyagiamit08/ProductsImporter.git`
+- After the cloning is complete, open command prompt.
+- Go to the test folder inside the cloned repository using cd command. For example:
 	- `cd C:\Users\Amit Tyagi\Desktop\App\ProductsImporter\test`
 - Then run the below commands one by one as mentioned in the requirements 
   - `import.exe capterra feed-products/capterra.yaml`
