@@ -15,14 +15,12 @@ namespace ProductsImporter
 		{
 			if (!ArgumentsAreValid(args)) return;
 
-			var productsFilePath = args[1];
+			if (!FileExistsOnPath(args[1])) return;
 
-			if (!FileExistsOnPath(productsFilePath)) return;
-
-			var products = ImportProducts(args, productsFilePath);
+			var products = ImportProducts(args);
 
 			foreach (var product in products)
-				Console.WriteLine($"importing: Name:{product.Name}; Categories: {string.Join(", ", product.Categories)}; Twitter: {product.Twitter}");
+				Console.WriteLine($"importing: Name: {product.Name}; Categories: {string.Join(", ", product.Categories)}; Twitter: {product.Twitter}");
 		}
 
 		#region PrivateMethods
@@ -31,7 +29,7 @@ namespace ProductsImporter
 		{
 			if (args != null && args.Length == 2) return true;
 
-			Console.WriteLine("You have not entered the valid import command.");
+			Console.WriteLine("Please enter the valid import command.");
 			return false;
 
 		}
@@ -45,9 +43,11 @@ namespace ProductsImporter
 			return false;
 		}
 
-		private static IEnumerable<Product> ImportProducts(string[] args, string productsFilePath)
+		private static IEnumerable<Product> ImportProducts(string[] args)
 		{
 			var productsProvider = args[0];
+			var productsFilePath = args[1];
+
 			var fileName = Path.GetFileName(productsFilePath);
 			var fileExtension = Path.GetExtension(fileName);
 
