@@ -16,9 +16,9 @@ namespace ProductsImporter.BL.Factory
 		{
 			return productsProvider.ToLower() switch
 			{
-				ProductsProviders.SoftwareAdvice when fileExtension == FileExtensions.Json =>
+				ProductsProviders.SoftwareAdvice when fileExtension.ToLower() == FileExtensions.Json =>
 				new SoftwareAdviceProductsImporter(_streamReader),
-				ProductsProviders.Capterra when fileExtension == FileExtensions.Yaml => 
+				ProductsProviders.Capterra when fileExtension.ToLower() == FileExtensions.Yaml => 
 				new CapterraProductsImporter(_streamReader),
 				_ => null
 			};
