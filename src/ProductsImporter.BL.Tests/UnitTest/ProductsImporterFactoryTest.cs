@@ -5,7 +5,7 @@ using ProductsImporter.BL.Factory;
 using ProductsImporter.BL.Implementation;
 using ProductsImporter.BL.Interfaces;
 
-namespace TestProject.Bl.Test
+namespace ProductsImporter.BL.Tests.UnitTest
 {
 	public class ProductsImporterFactoryTest
 	{

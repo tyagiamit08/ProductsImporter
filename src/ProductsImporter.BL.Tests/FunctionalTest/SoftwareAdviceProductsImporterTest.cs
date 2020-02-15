@@ -7,7 +7,7 @@ using Moq;
 using ProductsImporter.BL.Implementation;
 using ProductsImporter.BL.Interfaces;
 
-namespace TestProject.Bl.Test
+namespace ProductsImporter.BL.Tests.FunctionalTest
 {
 	[TestFixture]
 	public class SoftwareAdviceProductsImporterTest
